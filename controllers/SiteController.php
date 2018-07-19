@@ -9,6 +9,7 @@ use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use GitElephant\Repository;
 
 class SiteController extends Controller
 {
@@ -61,7 +62,9 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+        
         return $this->render('index');
+        
     }
 
     /**
@@ -125,4 +128,13 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
+    
+    public function actionHello() {
+        
+        $repo = new Repository('/var/www/html/github');
+        $local_status = $repo -> getCommit();
+        
+       return $this->render('hello', array('astatus' => $local_status));
+    }
+    
 }
