@@ -1,1 +1,5 @@
-dasds
+{php}
+
+phpinfo();
+
+{/php}
