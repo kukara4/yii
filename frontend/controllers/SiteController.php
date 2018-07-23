@@ -49,6 +49,16 @@ class SiteController extends Controller
         ];
     }
 
+    public function beforeAction($action)
+    {
+       if (Yii::$app->user->isGuest && Yii::$app->request->url !== '/login') {
+            $this->redirect(['/login']);
+       } else {
+         return true;
+       }
+       //something code right here if user valided
+}
+
     /**
      * {@inheritdoc}
      */
