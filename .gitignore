@@ -31,3 +31,8 @@ tests/_support/_generated
 
 #vagrant folder
 /.vagrant
+
+#local
+yii
+yii_test
+yii_test.bat
