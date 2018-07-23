@@ -82,7 +82,9 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        //return $this->render('index');
+        $this->layout = 'smarty.tpl';
+        return $this->render('renderer.tpl', ['username' => 'Alex']);
     }
 
     /**
