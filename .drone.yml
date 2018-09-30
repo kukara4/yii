@@ -1,5 +1,6 @@
 pipeline:
   docker:
+    image: plugins/docker
     dockerfile: Dockerfile
   #backend:
   #  image: docker-registry.test.abm-inventory.app/base-images:latest
