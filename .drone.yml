@@ -1,6 +1,6 @@
 pipeline:
   backend:
-    image: centos
+    image: docker-registry.test.abm-inventory.app/basic-images:latest
     commands:
       - whoami
       - yum upgrade -y
