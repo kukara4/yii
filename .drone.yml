@@ -4,6 +4,7 @@ pipeline:
     dockerfile: Dockerfile
     repo: docker-registry.test.abm-inventory.app/california/base-app
     registry: docker-registry.test.abm-inventory.app
+    secrets: [ registry_user, registry_password ]
     auto_tag: true
   #backend:
   #  image: docker-registry.test.abm-inventory.app/base-images:latest
