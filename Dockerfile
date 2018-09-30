@@ -29,11 +29,3 @@ RUN yum install -y curl \
     wget \
     zip
 
-# Install rvm/ruby
-
-RUN curl -sSL https://rvm.io/mpapis.asc | gpg2 --import -
-RUN curl -L get.rvm.io | bash -s stable
-RUN /usr/local/rvm/bin/rvm reload
-RUN /usr/local/rvm/bin/rvm requirements run
-RUN /usr/local/rvm/bin/rvm install ${ruby_version}
-RUN /usr/local/rvm/bin/rvm alias create default ruby-${ruby_version}
