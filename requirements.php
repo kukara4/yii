@@ -7,7 +7,7 @@
  *
  * In order to run this script from the web, you should copy it to the web root.
  * If you are using Linux you can create a hard link instead, using the following command:
- * ln ../requirements.php requirements.php
+ * ln ../requirements.php requirements.phpfsdfsdfsd
  */
 
 // you may need to adjust this path to the correct Yii framework path
