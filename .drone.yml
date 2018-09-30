@@ -2,5 +2,6 @@ pipeline:
   backend:
     image: docker-registry.test.abm-inventory.app/base-images:latest
     commands:
+      - ls -la
       - whoami
       - yum upgrade -y
