@@ -3,4 +3,4 @@ pipeline:
     image: centos
     commands:
       - whoami
-      - yum upgrade
+      - yum upgrade -y
