@@ -10,3 +10,5 @@ pipeline:
     image: plugins/slack
     webhook: https://hooks.slack.com/services/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
     channel: drone
+    when:
+      status: [ success, failure ]
