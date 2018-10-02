@@ -2,13 +2,11 @@ pipeline:
   docker:
     image: plugins/docker
     dockerfile: Dockerfile
-    repo: docker-registry.test.abm-inventory.app/california/base-app
-    registry: docker-registry.test.abm-inventory.app
-    secrets: [ docker_username, docker_password ]
-    auto_tag: true
-  #backend:
-  #  image: docker-registry.test.abm-inventory.app/base-images:latest
-  #  commands:
-  #    - ls -la
-  #    - whoami
-  #    - yum upgrade -y
+    #repo: docker-registry.test.abm-inventory.app/california/base-app
+    #registry: docker-registry.test.abm-inventory.app
+    #secrets: [ docker_username, docker_password ]
+    #auto_tag: true
+  slack:
+    image: plugins/slack
+    webhook: https://hooks.slack.com/services/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
+    channel: drone
